@@ -1,0 +1,21 @@
+#post_list {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #post_list td, #post_list th {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+  }
+  
+  #post_list tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #post_list tr:hover {background-color: #ddd;}
+  
+  #post_list th {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }

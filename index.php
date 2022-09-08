@@ -4,8 +4,6 @@
 
 <?php
 
-
-$pageName = basename($_SERVER['PHP_SELF']);
 $pageName .= "?";
 
 $query = "SELECT * FROM posts";
@@ -14,7 +12,7 @@ $select_all_posts = mysqli_query($connection, $query);
 $counter = mysqli_num_rows($select_all_posts);
 $counter = ceil($counter/$per_page);
 
-$query = "SELECT * FROM posts LIMIT $page_1,$per_page";
+$query = "SELECT * FROM posts ORDER BY post_time DESC LIMIT $page_1,$per_page";
 
 $select_all_posts_query = mysqli_query($connection, $query);
     while($row = mysqli_fetch_assoc($select_all_posts_query)) {

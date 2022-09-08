@@ -13,3 +13,5 @@ $per_page = 5;
     }
 
 ?>
+
+<?php $pageName = basename($_SERVER['PHP_SELF']); ?>
