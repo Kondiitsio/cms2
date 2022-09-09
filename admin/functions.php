@@ -26,5 +26,10 @@ function confirmQuery($result) {
     }
 }
 
+function redirect($location) {
+    header("Location:" . $location);
+    exit;
+}
+
 //===== END GENERAL HELPERS =====//
 /////////////////////////////////////////

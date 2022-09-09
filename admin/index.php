@@ -1,4 +1,5 @@
 <?php include "includes/admin_header.php" ?>
+
 <!--- POST LIST  -->
 <table id="post_list">
     <thead>
@@ -8,12 +9,19 @@
             <th>Tags</th>
             <th>User</th>
             <th>Date</th>
+            <th>Edit</th>
+            <th>DELETE</th>
         </tr>
 
 <?php
+if(isset($_POST['delete'])){
+    $the_post_id = escape($_POST['post_id']);
+    $query = "DELETE FROM posts WHERE post_id = {$the_post_id} ";
+    $delete_query = mysqli_query($connection, $query);
+    redirect("/cms2/admin");
+    }
 
 $query = "SELECT * FROM posts ORDER BY post_time DESC";
-
 $select_all_posts_query = mysqli_query($connection, $query);
     while($row = mysqli_fetch_assoc($select_all_posts_query)) {
         $post_id = $row['post_id'];
@@ -31,11 +39,15 @@ $select_all_posts_query = mysqli_query($connection, $query);
         echo "<td>$post_title</td>";
         echo "<td>$post_tags</td>";
         echo "<td>$post_user</td>";
-        echo "<td>$post_date</td>";
-        echo "</tr>";
-
-    }
+        echo "<td>$post_date</td>"; 
 ?>
+
+<form method="post">
+   <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
+   <?php echo '<td><input type="submit" name="delete" value="Delete"></td>' ?>
+</form>
+
+<?php echo"</tr>"; } ?>
 
     </thead>
 </table>
@@ -58,8 +70,8 @@ if(isset($_POST['create_post'])) {
     confirmQuery($create_post_query);
 
     $the_post_id = mysqli_insert_id($connection);
-
-    echo "<p>Post Created. <a href='/cms2/'>Home page</a> or <a href='/cms2/admin/'>Post list</a></p>";
+    redirect("/cms2/admin");
+    
 }
 
 ?>
