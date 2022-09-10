@@ -13,4 +13,5 @@
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
     <link rel="stylesheet" href="/cms2/css/styles.css">
+    <link rel="stylesheet" href="/cms2/css/summernote-lite.css">
 </head>

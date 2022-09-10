@@ -1,6 +1,5 @@
 <?php
 
-$per_page = 5;
     if(isset($_GET['page'])) {
         $page = escape($_GET['page']);
     } else {
@@ -14,4 +13,3 @@ $per_page = 5;
 
 ?>
 
-<?php $pageName = basename($_SERVER['PHP_SELF']); ?>

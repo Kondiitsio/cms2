@@ -9,4 +9,6 @@
     <meta name="author" content="name">
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<body>
