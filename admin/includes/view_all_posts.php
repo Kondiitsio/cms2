@@ -1,5 +1,9 @@
 <a href="../index.php">Home page</a>
+<a href="profile.php">Profile</a>
+<a href="users.php">Users</a>
 <a href="?source=add_post">Add new Post</a>
+<a href="/cms2/includes/logout.php">Log out</a>
+
 
 <?php $pageName = basename('/cms2/admin'); ?>
 

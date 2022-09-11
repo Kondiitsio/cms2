@@ -1,5 +1,11 @@
+
 <?php include "../includes/db.php" ?>
 <?php include "functions.php" ?>
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,3 +21,14 @@
     <link rel="stylesheet" href="/cms2/css/styles.css">
     <link rel="stylesheet" href="/cms2/css/summernote-lite.css">
 </head>
+
+
+
+
+
+<?php 
+// if(isset($_SESSION['user_role'])) {
+// } else {
+// header("location: ../index.php");
+// }
+ ?>

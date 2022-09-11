@@ -41,7 +41,7 @@ $select_all_posts_query = mysqli_query($connection, $query);
     <div class="column side">
     </div>
     <div class="column middle">
-        <h1><?php echo $post_title ?></h1>
+        <h2><?php echo $post_title ?></h2>
         <p><?php echo $post_content ?></p>
         <p><?php echo $post_tags ?> | <?php echo $post_date ?> | <?php echo $post_user ?></p> 
     </div>
