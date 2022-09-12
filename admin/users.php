@@ -1,7 +1,10 @@
 <?php include "includes/admin_header.php" ?>
-
+<div class="row">
+    <div class="column side">
+    </div>
+    <div class="column middle">
 <h1>Users</h1>
-<a href="/cms2/admin/">Back to posts</a>
+<a href="/cms2/admin/">Back to posts</a> | 
 
 <?php
 if (isset($_GET['source'])) {
@@ -27,5 +30,7 @@ switch($source) {
 }
 ?>
 
-
+</div>
+    <div class="column side">
+    </div>
 <?php include "includes/admin_footer.php" ?>

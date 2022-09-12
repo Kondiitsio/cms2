@@ -2,7 +2,6 @@
 <?php
 
 if(isset($_POST['create_post'])) {
-
     $post_title        = escape($_POST['post_title']);
     $post_content      = escape($_POST['post_content']);
     $post_tags         = escape($_POST['post_tags']);
@@ -17,20 +16,19 @@ if(isset($_POST['create_post'])) {
 
     $the_post_id = mysqli_insert_id($connection);
     redirect("/cms2/admin");
-    
 }
-
 ?>
 
-<form action="" method="post" enctype="multipart/form-data">
-    <label for="post_title">Post title</label>
-        <input type="text" name="post_title"><br>
-    <label for="summernote">Post Content</label>
-        <textarea name="post_content" id="summernote"></textarea><br>
-    <label for="post_tags">Tags</label>
-        <input type="text" name="post_tags"><br>
-    <label for="post_user">User</label>
-        <input type="text" name="post_user"><br>
-    <button type="submit" name="create_post" value="Publish Post">Submit</button>
-</form>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="post_title">Post title</label>
+            <input type="text" name="post_title"><br>
+            <textarea name="post_content" id="summernote"></textarea><br>
+        <label for="post_tags">Tags</label>
+            <input type="text" name="post_tags"> | 
+        <label for="post_user">User:</label>
+        <input name="post_user" value="<?php echo (getLoggedInUsername());?>"><br>
+        <button type="submit" name="create_post" value="Publish Post">Create post</button>
+        <a href="/cms2/admin/">Cancel go back to posts</a>
+    </form>
 <!-- END CREATE POST -->
+

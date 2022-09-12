@@ -48,8 +48,8 @@ function login_user($username, $password){
     $username = trim($username);
     $password = trim($password);
 
-    $username = escape($connection, $username);
-    $password = escape($connection, $password);
+    $username = mysqli_real_escape_string($connection, $username);
+    $password = mysqli_real_escape_string($connection, $password);
 
     $query = "SELECT * FROM users WHERE username = '{$username}' ";
     $select_user_query = mysqli_query($connection, $query);
@@ -87,6 +87,10 @@ function isLoggedIn(){
         return true;
     }
     return false;
+}
+
+function getLoggedInUsername(){
+    return isset ($_SESSION['username']) ? $_SESSION['username'] : null;
 }
 
 //===== END USER HELPERS =====//

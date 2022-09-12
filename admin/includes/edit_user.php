@@ -58,7 +58,9 @@ if($db_user_password != $user_password) {
 
 <form action="" method="post" enctype="multipart/form-data">
     <label for="user_role">Role</label><br>
-        <input type="text" name="user_role" value="<?php echo $user_role; ?>"><br>
+        <select name="user_role" id="">
+            <option value="<?php echo $user_role; ?>">admin</option>
+        </select><br>
     <label for="username">Username</label><br>
         <input type="text" name="username" value="<?php echo $username; ?>"><br>
     <label for="user_password">Password</label><br>

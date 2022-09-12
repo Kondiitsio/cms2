@@ -1,5 +1,5 @@
 <a href="?source=add_user">Add new user</a>
-<table>
+<table id="list">
       <thead>
          <tr>
             <th>Id</th>

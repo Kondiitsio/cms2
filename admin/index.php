@@ -1,8 +1,10 @@
 <?php include "includes/admin_header.php" ?>
 
-<?php $per_page = 10; ?>
-
-
+<?php $per_page = 20; ?>
+<div class="row">
+    <div class="column side">
+    </div>
+    <div class="column middle">
 <?php
 if (isset($_GET['source'])) {
     $source = $_GET['source'];
@@ -30,5 +32,7 @@ switch($source) {
 }
 ?>
 
-
+</div>
+    <div class="column side">
+    </div>
 <?php include "includes/admin_footer.php" ?>

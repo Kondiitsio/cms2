@@ -25,7 +25,9 @@ if(isset($_POST['create_user'])) {
 
 <form action="" method="post" enctype="multipart/form-data">
     <label for="user_role">Role</label><br>
-        <input type="text" name="user_role"><br>
+        <select name="user_role" id="">
+                <option value="admin">admin</option>
+        </select><br>
     <label for="username">Username</label><br>
         <input type="text" name="username"><br>
     <label for="user_password">Password</label><br>

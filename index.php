@@ -1,11 +1,18 @@
 <?php include "includes/db.php"; ?>
 <?php include "includes/header.php"; ?>
+<?php include "admin/functions.php"; ?>
 
 <div class="header">
   <h1>Header</h1>
   <p>Resize the browser window to see the responsive effect.</p>
-</div>
 
+
+<?php
+    if(isLoggedIn()) {
+        echo "<a href='/cms2/admin/'>Go to admin " . getLoggedInUsername() . "</a>" . " | " . "<a href='/cms2/includes/logout.php'>Logout</a>";
+     } 
+    ?>
+</div>
 <?php $per_page = 5; ?>
 <?php include "includes/top_pager.php"; ?>
 

@@ -1,14 +1,18 @@
-<a href="../index.php">Home page</a>
-<a href="profile.php">Profile</a>
-<a href="users.php">Users</a>
-<a href="?source=add_post">Add new Post</a>
+
+
+
+<h1>Welcome to admin <?php echo (getLoggedInUsername());?></h1>
+
+<a href="../index.php">Home page</a> | 
+<a href="users.php">Users</a> | 
+<a href="?source=add_post">Add new Post</a> | 
 <a href="/cms2/includes/logout.php">Log out</a>
 
 
 <?php $pageName = basename('/cms2/admin'); ?>
 
 <!--- POST LIST  -->
-<table id="post_list">
+<table id="list">
     <thead>
         <tr>
             <th>ID</th>
