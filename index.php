@@ -3,8 +3,8 @@
 <?php include "admin/functions.php"; ?>
 
 <div class="header">
-  <h1>Header</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
+  <h1>👾️ Welcome to my blog</h1>
+  <h4>A small piece of the world of technology</h4>
 
 
 <?php
@@ -50,7 +50,7 @@ $select_all_posts_query = mysqli_query($connection, $query);
     <div class="column middle">
         <h2><?php echo $post_title ?></h2>
         <p><?php echo $post_content ?></p>
-        <p><?php echo $post_tags ?> | <?php echo $post_date ?> | <?php echo $post_user ?></p> 
+        <div class="tagsDateUser"><p><?php echo $post_tags ?> | <?php echo $post_date ?> | <?php echo $post_user ?></p></div>
     </div>
     <div class="column side">
     </div>

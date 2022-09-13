@@ -1,3 +1,16 @@
+/*************** FONTS ******************/
+@font-face { font-family: OpenSans; src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf'); }
+@font-face { font-family: OpenSans-Italic; src: url('../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf'); }
+@font-face { font-family: Ubuntu; src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf'); }
+@font-face { font-family: Ubuntu-Bold; src: url('../fonts/Ubuntu/Ubuntu-Bold.ttf'); }
+
+
+h1 { font-family: Ubuntu-Bold, sans-serif; }
+h2 { font-family: Ubuntu, sans-serif; }
+h4 { font-family: OpenSans-Italic, sans-serif; }
+p { font-family: OpenSans, sans-serif; }
+a { font-family: OpenSans, sans-serif; text-decoration: none; }
+a:hover { text-decoration: underline; }
 /*************** HOME PAGE LAYOUT ******************/
 * {
   box-sizing: border-box;
@@ -30,8 +43,12 @@ body {
   display: table;
   clear: both;
 }
+.tagsDateUser {
+  
+  color: purple;
+}
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .column.side, .column.middle {
     width: 100%;
   }
@@ -42,12 +59,21 @@ body {
   padding: 10px;
   text-align: center;
 }
+.footerLink i {
+  vertical-align: middle;
+  margin-right: 0.313rem;
+}
+.footerLink a {
+  color: black;
+  font-family: OpenSans-Italic, sans-serif;
+}
 /*************** END HOME PAGE LAYOUT ******************/
 /*************** PAGINATION ******************/
 .pagination {
   display: inline-block;
   display: flex;
   justify-content: center;
+  font-family: OpenSans, sans-serif;
 }
 .pagination a {
   color: black;
@@ -56,7 +82,7 @@ body {
   text-decoration: none;
 }
 .pagination a.active {
-  background-color: #4CAF50;
+  background-color: purple;
   color: white;
 }
 .pagination a:hover:not(.active) {background-color: #ddd;}
