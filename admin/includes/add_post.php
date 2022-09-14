@@ -21,12 +21,12 @@ if(isset($_POST['create_post'])) {
 
     <form action="" method="post" enctype="multipart/form-data">
         <label for="post_title">Post title</label>
-            <input type="text" name="post_title"><br>
+            <input type="text" name="post_title"><br><br>
             <textarea name="post_content" id="summernote"></textarea><br>
         <label for="post_tags">Tags</label>
             <input type="text" name="post_tags"> | 
         <label for="post_user">User:</label>
-        <input name="post_user" value="<?php echo (getLoggedInUsername());?>"><br>
+        <input name="post_user" value="<?php echo (getLoggedInUsername());?>"><br><br>
         <button type="submit" name="create_post" value="Publish Post">Create post</button>
         <a href="/cms2/admin/">Cancel go back to posts</a>
     </form>

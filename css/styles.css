@@ -4,7 +4,7 @@
 @font-face { font-family: Ubuntu; src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf'); }
 @font-face { font-family: Ubuntu-Bold; src: url('../fonts/Ubuntu/Ubuntu-Bold.ttf'); }
 
-
+label { font-family: OpenSans, sans-serif; }
 h1 { font-family: Ubuntu-Bold, sans-serif; }
 h2 { font-family: Ubuntu, sans-serif; }
 h4 { font-family: OpenSans-Italic, sans-serif; }
@@ -64,8 +64,8 @@ body {
   margin-right: 0.313rem;
 }
 .footerLink a {
-  color: black;
-  font-family: OpenSans-Italic, sans-serif;
+  color: purple;
+  font-family: OpenSans, sans-serif;
 }
 /*************** END HOME PAGE LAYOUT ******************/
 /*************** PAGINATION ******************/
@@ -95,6 +95,7 @@ body {
 #list {
     border-collapse: collapse;
     width: 100%;
+    font-family: OpenSans, sans-serif;
   }
   #list td, #list th {
     border: 1px solid #ddd;
@@ -106,6 +107,6 @@ body {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     text-align: left;
-    background-color: #04AA6D;
+    background-color: purple;
     color: white;
   }

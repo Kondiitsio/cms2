@@ -1,7 +1,7 @@
 
 
 
-<h1>Welcome to admin <?php echo (getLoggedInUsername());?></h1>
+<h1>Welcome <?php echo (getLoggedInUsername());?></h1>
 
 <a href="../index.php">Home page</a> | 
 <a href="users.php">Users</a> | 

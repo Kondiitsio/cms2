@@ -13,7 +13,7 @@
      } 
     ?>
 </div>
-<?php $per_page = 5; ?>
+<?php $per_page = 100; ?>
 <?php include "includes/top_pager.php"; ?>
 
 <?php $pageName = basename($_SERVER['PHP_SELF']); ?>
@@ -62,7 +62,7 @@ $select_all_posts_query = mysqli_query($connection, $query);
     <div class="column side">
     </div>
     <div class="column middle">
-        <?php include "includes/pager.php"; ?>
+        <?php //include "includes/pager.php"; ?>
     </div>
     <div class="column side">
     </div>
